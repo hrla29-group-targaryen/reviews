@@ -1,21 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './Components/App.jsx';
 
-class Reviews extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      reviewData: []
-    }
-  }
-
-  render() {
-    return (
-      <div>
-        Reviews
-      </div>
-    )
-  }
-}
-
-ReactDOM.render(<Reviews />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
