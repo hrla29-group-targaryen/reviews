@@ -34,35 +34,51 @@ const commentGenerator = (foodType, starRating) => {
 
   let randomFood1 = food[Math.floor(Math.random() * food.length)];
   
-  let positiveStart = ['I love eating here! ', 'My family and I eat here twice a week. ',
-  'I often go here on my lunch break. ', 'This is a great place for a family dinner. ',
-  'I take business associates here to impress them. ', 'Great for a quick bite. ', 
-  'They give you a lot of food for the price! '];
-  let neutralStart = ['This place is just okay. ', 'We go here every once in a while. ', 
-  'Food here is hit or miss. ', 'Some of the food is great. ', 'I like this place but dont go on Mondays. ',
-  'Great for adults but not for kids. '];
-  let negativeStart = ['I hate this restaurant. ', 'The waiters are so slow. ',
-  'Expect the service to be terrible! ','Prices here are outrageous. ', 'Always way too loud there. ',
-  'Smells terrible all the time. ', 'The staff was so rude! '];
+  let positiveStart = ['I love eating from here! ', 'My family and I order from here twice a week. ',
+  'I often order this on my lunch break. ', 'This is a great place to get a family dinner. ',
+  'I have them cater my business meetings and my associates love it. ', 'Great for a quick bite. ', 
+  'They give you a lot of food for the price! ', 'Always on time!'];
+  let neutralStart = ['This place is just okay. ', 'We order from here every once in a while. ', 
+  'Food here is hit or miss. ', 'Some of the food is great. ', 'I like this place but dont order on Mondays. ',
+  'Great for adults but not for kids. ', 'The food was good but they wont deliver alcohol. ',
+  'They forgot to give me utensils or napkins. '];
+  let negativeStart = ['I hate this restaurant. ', 'The delivery always takes 3 hours. ',
+  'They cancelled my order after I was waiting for an hour! ','Prices here are outrageous. ', 
+  'They refuse to deliver because the chef thinks "his food is too good for delivery". ',
+  'The food smells terrible every time. ', 'The staff was so rude! ', 
+  'I received my food late and it was as cold as the Night King'];
 
   let positiveMid = [`My favorite is the ${randomFood1}. `, `I ate the ${randomFood1} and it was to die for. `, 
-  `We ordered the ${randomFood1} and it came out right away. `, `I've never had ${randomFood1} that was so juicy. `,
-  `The ${randomFood1} is always so fresh and great. `, `The chefs special is the ${randomFood1}. `, 
+  `We ordered the ${randomFood1} and it was delivered right away. `, `I've never had ${randomFood1} that was so juicy. `,
+  `The ${randomFood1} is always so fresh and great. `, `The chef's special is the ${randomFood1}. `, 
   `You will never eat ${randomFood1} anywhere as good as they make it here. `, 
   `The ${randomFood1} tastes great with some hot sauce. `, 
-  `I love dipping the ${randomFood1} in some ranch. `];
-  let neutralMid = [];
-  let negativeMid = [];
+  `I love the ${randomFood1}. It is the best thing on the menu. `,
+  `One time they gave me 3 extra orders of ${randomFood1} by accident. `,];
+  let neutralMid = [`The ${randomFood1} is good but everything else on the menu sucks. `,
+  `If not for the half price ${randomFood1} special on Thursdays, I probably would not order from here. `,
+  `My husband likes getting the ${randomFood1}. I'm not a huge fan. `,
+  `I ate the ${randomFood1}. Not bad but nothing like the Cheesecake Factory. `,
+  `They sent me a box of sushi when I really ordered ${randomFood1}, but they were nice enough to refund my order and give me free food. `,
+  `The ${randomFood1} spilled out of the container...but it was still delicious. `];
+  let negativeMid = [`There is so much salt in the ${randomFood1}. `, `There was a bug in my ${randomFood1}. `, 
+  `My son ate the ${randomFood1} and felt sick all night. `, 
+  `I asked if the ${randomFood1} was made with dairy and the employee said no but there so much butter in it; I am lactose intolerant and I feel like I'm going to die. `,
+  `I usually love ${randomFood1} but they don't know how to make it the right way. `,
+  `The delivery man threw ${randomFood1} at my face. `,
+  `One time I was there, someone spilled ${randomFood1} on the floor and it was there for 3 hours before they cleaned it. `];
 
   let positiveEnd = ['Would definitely recommend! Mmmmmm', 'I would give it 6 stars if I could.', 
-  'Cant wait to come here again soon!', 'Best food ive had in a while!', 'Now I know what food should taste like.',
-  'My daughter even got a free dessert!', 'They were so nice they gave me a drink on the house.'];
-  let neutralEnd = ['I just wish it had a better environment.', 'There are better options if you have time.',
-  'It is too crowded most nights', 'The food was great but it took way too long.', 
-  'It was better than I expected, but not great.'];
-  let negativeEnd = ['I will never go here again!.', 'We will be reporting this restaurant to the BBB.',
-  'Someone is going to get sick eating here.', 'AVOID AT ALL COSTS!!', 'Go to the place next door instead.',
-  'I will be pursuing legal action immediately.', 'Im still hungry!', 'I think I may throw up.'];
+  'Cant wait to order this again soon!', 'Best food ive had in a while!', 'Now I know what food should taste like.',
+  'My daughter even got a free dessert with her kids meal!', 'They were so nice they gave me a drink on the house.'];
+  let neutralEnd = ['I just wish they knew how to pack soup properly.', 'There are better options if you have time.',
+  'It is too busy most nights', 'The food was great but it took way too long.', 
+  'It was better than I expected, but not great.', 'They forgot my drink.'];
+  let negativeEnd = ['I will never eat from here again!.', 'We will be reporting this restaurant to the BBB.',
+  'Someone is going to get sick eating here.', 'AVOID AT ALL COSTS!!', 'Order from the place next door instead.',
+  'I will be pursuing legal action immediately.', 'Im still hungry!', 'I think I may throw up.', 
+  'I would rather eat a hot dog at 7/11', 
+  'Every time I ask for extra sauce they put a note in my order that says "What do you think this is, the Bellagio? We dont have Kim Kardashian money".'];
 
   let comment= '';
   let startPhrase;
@@ -161,7 +177,7 @@ user: {
          }
 starRating: Number(1-5)
 Ordered: [String] ??? /////////////////
-comments: String ///////////////////
+comments: String
 date: date
 }
 */
