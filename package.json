@@ -4,15 +4,18 @@
   "description": "",
   "author": "",
   "license": "",
+  "scripts": {
+    "build": "webpack -w",
+    "start": "nodemon ./server/index.js",
+    "generateData": "node ./database/mockdata.js"
+  },
   "engines": {
     "node": ">=6.13.0"
-  },
-  "scripts": {
-    
   },
   "dependencies": {
     "axios": "^0.18.0",
     "express": "^4.16.4",
+    "faker": "^4.1.0",
     "mongoose": "^5.5.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
