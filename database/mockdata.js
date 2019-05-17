@@ -188,6 +188,9 @@ const generateFakeData = (num) => {
 generateFakeData(10);
 
 
+module.exports = generateFakeData;
+
+
 /*
 {
 _id: Number (1-500)

@@ -2,18 +2,18 @@ const mongoose = require('mongoose');
 
 const reviewSchema = new mongoose.Schema({
 
-_id: {type: Number, required: true},
-restaurantID: {type: Number, required: true},
+_id: Number,
+restaurantID: Number,
 user: {
-    firstName: {type: String, required: true},
-    firstLetter: {type: String, required: true},
-    numOfRatings: {type: Number, required: true},
-    topReviewer: {type: Boolean, required: true},
+    firstName: String,
+    firstLetter: String,
+    numOfRatings: Number,
+    topReviewer: Boolean,
     },
-starRating: {type: Number, required: true},
-comments: {type: String, required: true},
-date: {type: Date, required: true},
-Ordered: {type: [String], required: true}
+starRating: Number,
+comments: String,
+date: Date,
+Ordered: [String]
 })
 
 const ReviewList = mongoose.model('reviewLists', reviewSchema);

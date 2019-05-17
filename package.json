@@ -7,6 +7,7 @@
   "scripts": {
     "build": "webpack -w",
     "start": "nodemon ./server/index.js",
+    "seed" : "node ./database/seed.js",
     "generateData": "node ./database/mockdata.js"
   },
   "engines": {
