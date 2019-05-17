@@ -182,8 +182,6 @@ const generateFakeData = (num) => {
 
     restaurantID++;
   }
-
-  console.log(fakeData);
   return fakeData;
 }
 
@@ -195,7 +193,7 @@ generateFakeData(10);
 _id: Number (1-500)
 restaurantID: Number (1-100)
 user: {
-         Name: String
+         firstName: String
          firstLetter: String
          numOfRatings: Number
          topReviewer: Boolean
