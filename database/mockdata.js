@@ -1,23 +1,20 @@
 const faker = require('faker');
 
-let reviews = [
-
-];
+let italianFoods = ['Cheese Pizza', 'Chicken Parmesan', 'Spaghetti and Meatballs', 'Garlic Bread', 
+'Pasta with Pesto', 'Bread Sticks', 'Caesar Salad', 'Pepperoni Pizza', 'BBQ Pizza'];
+let mexicanFoods = ['Fish Tacos', 'Chicken Tacos', 'Carne Asada Tacos', 
+'Spicy Enchiladas', 'California Burrito', 'Shrimp Tacos', 'Fajita Salad Bowl', 'Veggie Bowl',
+ 'Steak Quesadilla', 'Nacho Platter', 'Taquitos'];
+let chineseFoods = ['Chow Mein', 'Chicken Fried Rice', 'Orange Chicken', 'Teriyaki Chicken', 
+'Wok-Fired Shrimp', 'Kung Pao Chicken','Veggie Egg Roll', 'Chicken Egg Roll', 'White Rice', 'Brown Rice',
+'Honey Walnut Shrimp'];
+let burgerFoods = ['Cheeseburger', 'Hamburger', 'Cali Burger', 'Chili Cheeseburger', 
+'Vegan Burger', 'Chicken Sandwich', 'French Fries', 'Onion Rings', 'Double Bacon Cheeseburger',
+'Veggie Burger', 'Black Bean Burger', 'Chicken Tenders','Southwest Chicken Salad'];
+let koreanFoods = ['Bulgogi Beef', 'Galbi Chicken', 'Beef Short Ribs', 'Red Chicken', 
+'Organic Tofu', 'Spicy Pork', 'Kimchi', 'Spicy Noodles', 'Kimchi Rice', 'Chicken Salad'];
 
 const commentGenerator = (foodType, starRating) => {
-  let italianFoods = ['Cheese Pizza', 'Chicken Parmesan', 'Spaghetti and Meatballs', 'Garlic Bread', 
-  'Pasta with Pesto', 'Bread Sticks', 'Caesar Salad', 'Pepperoni Pizza', 'BBQ Pizza'];
-  let mexicanFoods = ['Fish Tacos', 'Chicken Tacos', 'Carne Asada Tacos', 
-  'Spicy Enchiladas', 'California Burrito', 'Shrimp Tacos', 'Fajita Salad Bowl', 'Veggie Bowl',
-   'Steak Quesadilla', 'Nacho Platter', 'Taquitos'];
-  let chineseFoods = ['Chow Mein', 'Chicken Fried Rice', 'Orange Chicken', 'Teriyaki Chicken', 
-  'Wok-Fired Shrimp', 'Kung Pao Chicken','Veggie Egg Roll', 'Chicken Egg Roll', 'White Rice', 'Brown Rice',
-  'Honey Walnut Shrimp'];
-  let burgerFoods = ['Cheeseburger', 'Hamburger', 'Cali Burger', 'Chili Cheeseburger', 
-  'Vegan Burger', 'Chicken Sandwich', 'French Fries', 'Onion Rings', 'Double Bacon Cheeseburger',
-  'Veggie Burger', 'Black Bean Burger', 'Chicken Tenders','Southwest Chicken Salad'];
-  let koreanFoods = ['Bulgogi Beef', 'Galbi Chicken', 'Beef Short Ribs', 'Red Chicken', 
-  'Organic Tofu', 'Spicy Pork', 'Kimchi', 'Spicy Noodles', 'Kimchi Rice', 'Chicken Salad'];
   
   let food;
   if (foodType === 'italian') {
@@ -48,7 +45,7 @@ const commentGenerator = (foodType, starRating) => {
   'They cancelled my order after I was waiting for an hour! ','Prices here are outrageous. ', 
   'They refuse to deliver because the chef thinks "his food is too good for delivery". ',
   'The food smells terrible every time. ', 'The staff was so rude! ', 
-  'I received my food late and it was as cold as the Night King. ',' Garbage every time. '];
+  'I received my food late and it was as cold as ice. ',' Garbage every time. '];
 
   let positiveMid = [`My favorite is the ${randomFood1}. `, `I ate the ${randomFood1} and it was to die for. `, 
   `We ordered the ${randomFood1} and it was delivered right away. `, `I've never had ${randomFood1} that was so juicy. `,
@@ -85,7 +82,7 @@ const commentGenerator = (foodType, starRating) => {
   'I will be pursuing legal action immediately.', 'Im still hungry!', 'I think I may throw up.', 
   'I would rather eat a hot dog at 7/11', 'They never get my order right',
   `I tried calling the restaurant but their phone didn't work.`, 'I would not feed this to my dog.', 'Never again!',
-  'Every time I ask for extra sauce they put a note in my order that says "What do you think this is, the Bellagio? We dont have Kim Kardashian money here".'];
+  'Every time I ask for extra sauce they put a note in my order that says "We are out of sauce till October".'];
 
   let comment= '';
   let startPhrase;
@@ -137,24 +134,38 @@ const generateFakeData = (num) => {
     let date = faker.date.past();
 
     let foodType;
+    let food;
     if (restaurantID >=1 && restaurantID <=20) {
       foodType = 'korean';
+      food = koreanFoods;
     }
     else if (restaurantID >=21 && restaurantID <=40) {
       foodType = 'mexican';
+      food = mexicanFoods;
     }
     else if (restaurantID >=41 && restaurantID <=60) {
       foodType = 'chinese';
+      food = chineseFoods;
     }
     else if (restaurantID >=61 && restaurantID <=80) {
       foodType = 'italian';
+      food = italianFoods;
     }
     else if (restaurantID >=81 && restaurantID <=100) {
       foodType = 'burger';
+      food = burgerFoods;
+    }
+
+    let numOfOrders = Math.floor(Math.random()*4);
+    let ordered = [];
+    for (let i = 0; i < numOfOrders; i++) {
+      let randomOrder = food[Math.floor(Math.random() * food.length)];
+      if (!ordered.includes(randomOrder)) {
+        ordered.push(randomOrder);
+      }
     }
 
     let comments = commentGenerator(foodType, starRating);
-    // console.log(_id);
 
     instance._id = _id;
     instance.restaurantID = restaurantID;
@@ -163,8 +174,9 @@ const generateFakeData = (num) => {
     instance.user.numOfRatings = numOfRatings;
     instance.user.topReviewer = topReviewer;
     instance.starRating = starRating;
-    instance.date = date;
     instance.comments = comments;
+    instance.ordered = ordered;
+    instance.date = date;
 
     fakeData.push(instance);
 
