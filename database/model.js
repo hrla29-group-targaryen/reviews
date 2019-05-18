@@ -1,8 +1,8 @@
 const mongoose = require('mongoose');
+const db = require('./index.js')
 
 const reviewSchema = new mongoose.Schema({
-
-_id: Number,
+reviewID: Number,
 restaurantID: Number,
 user: {
     firstName: String,
@@ -18,4 +18,4 @@ Ordered: [String]
 
 const ReviewList = mongoose.model('reviewLists', reviewSchema);
 
-module.exports.ReviewList = ReviewList;
+module.exports = ReviewList;

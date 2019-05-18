@@ -1,10 +1,11 @@
 const express = require('express')
 const path = require('path');
+const db = require('../database/index.js');
 
 const app = express()
 const port = 3200
 
-// app.get('/api', (req, res) => res.send('Hello World!'))
+app.get('/api/reviews', (req, res) => res.send('Hello World!'))
 
 app.use(express.static(path.join(__dirname, '../public')))
 

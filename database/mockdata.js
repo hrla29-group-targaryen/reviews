@@ -114,14 +114,14 @@ let restaurantID = 1;
 
 const generateFakeData = (num) => {
   let fakeData = [];
-  let _id = 0;
+  let reviewID = 0;
 
   if (restaurantID > 100) {
     restaurantID = 1;
   }
   
   for (let i = 0; i < num; i++) {
-    _id++;
+    reviewID++;
     let instance = {};
     instance.user = {};
 
@@ -167,7 +167,7 @@ const generateFakeData = (num) => {
 
     let comments = commentGenerator(foodType, starRating);
 
-    instance._id = _id;
+    instance.reviewID = reviewID;
     instance.restaurantID = restaurantID;
     instance.user.firstName = firstName;
     instance.user.firstLetter = firstLetter;
@@ -193,7 +193,7 @@ module.exports = generateFakeData;
 
 /*
 {
-_id: Number (1-500)
+reviewID: Number (1-500)
 restaurantID: Number (1-100)
 user: {
          firstName: String
