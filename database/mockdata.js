@@ -157,11 +157,11 @@ const generateFakeData = (num) => {
     }
 
     let numOfOrders = Math.floor(Math.random()*4);
-    let ordered = [];
+    let Ordered = [];
     for (let i = 0; i < numOfOrders; i++) {
       let randomOrder = food[Math.floor(Math.random() * food.length)];
-      if (!ordered.includes(randomOrder)) {
-        ordered.push(randomOrder);
+      if (!Ordered.includes(randomOrder)) {
+        Ordered.push(randomOrder);
       }
     }
 
@@ -175,35 +175,17 @@ const generateFakeData = (num) => {
     instance.user.topReviewer = topReviewer;
     instance.starRating = starRating;
     instance.comments = comments;
-    instance.ordered = ordered;
+    instance.Ordered = Ordered;
     instance.date = date;
 
     fakeData.push(instance);
 
     restaurantID++;
   }
+  console.log(fakeData);
   return fakeData;
 }
 
-generateFakeData(10);
-
+// generateFakeData(5);
 
 module.exports = generateFakeData;
-
-
-/*
-{
-reviewID: Number (1-500)
-restaurantID: Number (1-100)
-user: {
-         firstName: String
-         firstLetter: String
-         numOfRatings: Number
-         topReviewer: Boolean
-         }
-starRating: Number(1-5)
-Ordered: [String] ??? /////////////////
-comments: String
-date: date
-}
-*/

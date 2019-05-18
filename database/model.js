@@ -13,7 +13,7 @@ user: {
 starRating: Number,
 comments: String,
 date: Date,
-Ordered: [String]
+Ordered: [{type: String}]
 })
 
 const ReviewList = mongoose.model('reviewLists', reviewSchema);
