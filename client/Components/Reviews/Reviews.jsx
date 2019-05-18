@@ -1,4 +1,5 @@
 import React from 'react';
+import './reviews.css';
 
 class Reviews extends React.Component {
   constructor() {
@@ -12,6 +13,10 @@ class Reviews extends React.Component {
     return (
       <div>
         Reviews
+        hghgh
+        <div className="review-test">
+        TESTING
+        </div>
       </div>
     )
   }

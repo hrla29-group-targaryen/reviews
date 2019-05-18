@@ -5,7 +5,7 @@
   "author": "",
   "license": "",
   "scripts": {
-    "build": "webpack -w",
+    "build": "webpack -w -d",
     "start": "nodemon ./server/index.js",
     "seed" : "node ./database/seed.js",
     "generateData": "node ./database/mockdata.js"

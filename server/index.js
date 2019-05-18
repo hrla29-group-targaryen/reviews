@@ -9,6 +9,9 @@ app.get('/reviews/:restaurantID', (req, res) => {
 
   const {restaurantID} = req.params;
 
+  //GET data for one restaurant; i.e. send data back where {restaurantID : restaurantID}
+  //TODO
+
   res.status(200).send(`Restaurant #: ${restaurantID}`)
 })
 
