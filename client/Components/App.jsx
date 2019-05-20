@@ -1,5 +1,5 @@
 import React from 'react';
-import Reviews from './Reviews/Reviews.jsx';
+import ReviewList from './ReviewList/ReviewList.jsx';
 import Footer from './Footer/Footer.jsx';
 import axios from 'axios';
 
@@ -20,8 +20,7 @@ class App extends React.Component {
     let url = window.location.href;
     axios.get(url+'api/reviews')
       .then( data => {
-        console.log(data.data);
-        this.setState({reviewData: data.data}, () => console.log('this.state: ',this.state))
+        this.setState({reviewData: data.data})
       })
       .catch(err => console.log('Error getting review data: ',err));
   }
@@ -29,7 +28,7 @@ class App extends React.Component {
   render() {
     return (
       <div>
-        <Reviews reviewData={this.state.reviewData}/>
+        <ReviewList reviewData={this.state.reviewData}/>
         <Footer />
       </div>
     )
