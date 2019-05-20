@@ -17,7 +17,13 @@ class App extends React.Component {
   }
 
   getReviewsForRestaurantID() {
-    // axios.get('/reviews/')
+    let url = window.location.href;
+    axios.get(url+'api/reviews')
+      .then( data => {
+        console.log(data.data);
+        this.setState({reviewData: data.data}, () => console.log('this.state: ',this.state))
+      })
+      .catch(err => console.log('Error getting review data: ',err));
   }
 
   render() {

@@ -2,8 +2,8 @@ import React from 'react';
 import './reviews.css';
 
 class Reviews extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       
     }
@@ -13,9 +13,10 @@ class Reviews extends React.Component {
     return (
       <div>
         Reviews
-        hghgh
         <div className="review-test">
-        TESTING
+        {this.props.reviewData.map(function(item, index) {
+          return item.user.firstName
+        })}
         </div>
       </div>
     )
