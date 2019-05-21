@@ -1,7 +1,7 @@
 const generator = require ('./mockdata.js');
 const ReviewList = require ('./model.js');
 
-let myData = generator(3);
+let myData = generator(1000);
 
 const seeder = () => {
   ReviewList.insertMany(myData)

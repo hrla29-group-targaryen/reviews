@@ -75,12 +75,12 @@ const commentGenerator = (foodType, starRating) => {
   'My daughter even got a free dessert with her kids meal!', 'They were so nice they gave me a drink on the house.',
   'Five stars all the way!', 'Awesome service!', 'Loved it!', 'They deliver it so fast every time.'];
   let neutralEnd = ['I just wish they knew how to pack soup properly.', 'There are better options if you have time.',
-  'It is too busy most nights', 'The food was great but it took way too long.', 
+  'It is too busy most nights.', 'The food was great but it took way too long.', 
   'It was better than I expected, but not great.', 'They forgot my drink.', 'Meh.'];
   let negativeEnd = ['I will never eat from here again!.', 'We will be reporting this restaurant to the BBB and FDA.',
   'Someone is going to get sick eating here.', 'AVOID AT ALL COSTS!!', 'Order from the place next door instead.',
   'I will be pursuing legal action immediately.', 'Im still hungry!', 'I think I may throw up.', 
-  'I would rather eat a hot dog at 7/11', 'They never get my order right',
+  'I would rather eat a hot dog at 7/11', 'They never get my order right.',
   `I tried calling the restaurant but their phone didn't work.`, 'I would not feed this to my dog.', 'Never again!',
   'Every time I ask for extra sauce they put a note in my order that says "We are out of sauce till October".'];
 
@@ -122,8 +122,8 @@ const generateFakeData = (num) => {
       restaurantID = 1;
     }
 
-    //Randomize the amount of reviews each restaurant gets (1/3 chance)
-    let skipCurrentRestaurant = Math.ceil(Math.random()*3)
+    //Randomize the amount of reviews each restaurant gets (1/2 chance)
+    let skipCurrentRestaurant = Math.ceil(Math.random()*2)
     if (skipCurrentRestaurant === 1) {
       restaurantID++
       if (restaurantID > 100) {
@@ -196,6 +196,6 @@ const generateFakeData = (num) => {
   return fakeData;
 }
 
-generateFakeData(100);
+// generateFakeData(10);
 
 module.exports = generateFakeData;
