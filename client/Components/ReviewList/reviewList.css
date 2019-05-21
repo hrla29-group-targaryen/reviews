@@ -1,7 +1,12 @@
 /* 
-  Use .review- before the class name
+  Use .reviewList- before the class name
 */
 
 .reviewList-test {
   background-color: greenyellow;
+  font-family: graphik;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
 }
+

@@ -1,0 +1,15 @@
+/* 
+  Use .reviewListItem- before the class name
+*/
+
+.reviewListItem-test {
+  background-color: white;
+}
+
+.reviewListItem-firstLetter {
+  background-color: #41C2DD;
+  color:white;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
