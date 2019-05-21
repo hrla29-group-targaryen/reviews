@@ -8,6 +8,18 @@
   width: 1000px;
 }
 
+.footer-topHalf {
+  column-count: 4;
+  column-width: 250px;
+}
+
+.footer-bottomHalf {
+
+}
+
+.footer-collapsibleSection {
+}
+
 .footer-titleText {
   display: inline-block;
   width: 100%;

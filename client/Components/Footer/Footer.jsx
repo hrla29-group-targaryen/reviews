@@ -3,7 +3,7 @@ import './footer.css';
 
 const Footer = (props) => {
   return (
-    <div className="footer-body">
+    <div className="footer-body footer-topHalf">
       <div className="footer-collapsibleSection">
         <span className="footer-collapsibletitleText">Get to know us</span>
         <div className="footer-collapsibleContent">
@@ -51,14 +51,16 @@ const Footer = (props) => {
           </ul>
         </div>
       </div>
-      <div className="footer-divider">
-      </div>
-      <div>
-        <p>© 2019 Grubhub All rights reserved.</p>
-      </div>
-      <div>
-        <a href="">Terms of Use</a><br/>
-        <a href="">Privacy Policy</a>
+      <div className="footer-bottomHalf">
+        <div className="footer-divider">
+        </div>
+        <div>
+          <p>© 2019 Grubhub All rights reserved.</p>
+        </div>
+        <div>
+          <a href="">Terms of Use</a><br />
+          <a href="">Privacy Policy</a>
+        </div>
       </div>
 
     </div>
