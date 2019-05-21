@@ -116,11 +116,21 @@ const generateFakeData = (num) => {
   let fakeData = [];
   let reviewID = 0;
 
-  if (restaurantID > 100) {
-    restaurantID = 1;
-  }
   
   for (let i = 0; i < num; i++) {
+    if (restaurantID > 100) {
+      restaurantID = 1;
+    }
+
+    //Randomize the amount of reviews each restaurant gets (1/3 chance)
+    let skipCurrentRestaurant = Math.ceil(Math.random()*3)
+    if (skipCurrentRestaurant === 1) {
+      restaurantID++
+      if (restaurantID > 100) {
+        restaurantID = 1;
+      }
+    }
+
     reviewID++;
     let instance = {};
     instance.user = {};
@@ -182,10 +192,10 @@ const generateFakeData = (num) => {
 
     restaurantID++;
   }
-  console.log(fakeData);
+  // console.log(fakeData);
   return fakeData;
 }
 
-// generateFakeData(5);
+generateFakeData(100);
 
 module.exports = generateFakeData;
