@@ -2,14 +2,38 @@
   Use .reviewListItem- before the class name
 */
 
-.reviewListItem-test {
+.reviewListItem-body {
   background-color: white;
 }
 
-.reviewListItem-firstLetter {
+.reviewListItem-avatar {
   background-color: #41C2DD;
   color:white;
   height: 40px;
   width: 40px;
   border-radius: 50%;
+  display: inline-block;
+}
+
+.reviewListItem-firstName {
+  font-weight: bold;
+  display: inline-block;
+  font-size: 15.4px;
+  line-height: 1.595;
+}
+
+.reviewListItem-date {
+  color: rgba(0,0,0,.55);
+  font-size: 12px;
+  line-height: 1.45;
+  float: right;
+  display: inline-block;
+}
+
+.reviewListItem-reviewStatus {
+  display: inline-block;
+}
+
+.reviewListItem-comments {
+  display: inline-block;
 }

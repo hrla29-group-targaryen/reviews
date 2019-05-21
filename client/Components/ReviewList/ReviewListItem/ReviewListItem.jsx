@@ -20,18 +20,18 @@ const ReviewListItem = (props) => {
     })}</div>
   }
 
-  console.log(ordered)
-
   return (
-    <div>
-        <div className="reviewListItem-test">
-        <div className="reviewListItem-firstLetter">{props.review.user.firstLetter}</div><br/>
-        {props.review.user.firstName}<br/>
-        {reviewStatus}<br/>
-        {moment(props.review.date).format('MMM Do, YYYY')}<br/>
-        {props.review.comments}<br/>
-        {ordered}<br/>
+    <div className="reviewListItem-body">
+      <div className="reviewListItem-header">
+        <div className="reviewListItem-avatar">{props.review.user.firstLetter}</div>
+        <div className="reviewListItem-firstName">{props.review.user.firstName}</div>
+        <div className="reviewListItem-date">{moment(props.review.date).format('MMM Do, YYYY')}</div><br />
+        <div className="reviewListItem-reviewStatus">{reviewStatus}</div><br />
       </div>
+      <div className="reviewListItem-stars">*****STARS GO HERE*****</div>
+      <div className="reviewListItem-comments">{props.review.comments}</div><br />
+
+      {ordered}<br/>
     </div>
   )
 }
