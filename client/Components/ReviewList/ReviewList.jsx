@@ -30,7 +30,7 @@ class ReviewList extends React.Component {
               </select>
               <img className="reviewList-dropdownArrow" src="grubhubDropdownArrow.png" alt="dropdownArrow"></img>
             </div>
-          </div>
+          </div><br/>
           {this.props.reviewData.map(function (item, index) {
             return <ReviewListItem review={item} key={index} />
           })}

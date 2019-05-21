@@ -7,11 +7,13 @@
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
+  width: 1000px;
 }
 
 .reviewList-sort {
   float: right;
   display: flex;
+  justify-content: flex-end;
 }
 
 .reviewList-sortText {

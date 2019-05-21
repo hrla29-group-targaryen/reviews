@@ -69,6 +69,7 @@
   width: 21px;
   height: 18px;
   margin-top: 5px;
+  display: inline-block;
 }
 .reviewListItem-oneStar {
   width: 120px;
