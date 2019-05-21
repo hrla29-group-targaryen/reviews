@@ -7,9 +7,10 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      reviewData: []
+      reviewData: [],
     }
     this.getReviewsForRestaurantID = this.getReviewsForRestaurantID.bind(this);
+    this.sortReviews = this.sortReviews.bind(this);
   }
 
   componentDidMount() {
@@ -25,10 +26,20 @@ class App extends React.Component {
       .catch(err => console.log('Error getting review data: ',err));
   }
 
+  sortReviews(method) {
+    if (method === 'Most recent') {
+      //sort this.state.reviewData by date (most recent)
+
+    } else if (method === 'Highest rated') {
+      //sort this.state.reviewData by starRating
+      
+    }
+  }
+
   render() {
     return (
       <div>
-        <ReviewList reviewData={this.state.reviewData}/>
+        <ReviewList reviewData={this.state.reviewData} sortReviews={this.sortReviews}/>
         <Footer />
       </div>
     )
