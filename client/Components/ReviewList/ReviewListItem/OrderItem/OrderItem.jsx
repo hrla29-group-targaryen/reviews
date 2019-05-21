@@ -3,7 +3,7 @@ import './orderItem.css';
 
 const OrderItem = (props) => {
   return (
-    <div>
+    <div className="orderItem-order">
       {props.order} +
     </div>
   )

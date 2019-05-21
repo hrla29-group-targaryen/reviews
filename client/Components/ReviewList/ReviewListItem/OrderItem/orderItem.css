@@ -1,3 +1,14 @@
 /* 
   Use .orderItem- before the class name
 */
+
+.orderItem-order {
+  max-width: 245px;
+  display: inline-flex;
+  height: 30px;
+  color: rgba(0,0,0,.87);
+  background: rgba(0,0,0,.05);
+  padding: 0 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}

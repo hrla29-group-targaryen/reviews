@@ -7,12 +7,20 @@
 }
 
 .reviewListItem-avatar {
-  background-color: #41C2DD;
-  color:white;
-  height: 40px;
-  width: 40px;
   border-radius: 50%;
-  display: inline-block;
+  color: #fff;
+  background: #40c2de;
+  width: 40px;
+  height: 40px;
+  border-color: #fff;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  font-size: 14px;
+  font-weight:bold;
+  line-height: 1.45;
+  box-sizing: inherit;
 }
 
 .reviewListItem-firstName {
@@ -32,8 +40,14 @@
 
 .reviewListItem-reviewStatus {
   display: inline-block;
+  color: rgba(0, 0, 0, 0.87);
 }
 
 .reviewListItem-comments {
   display: inline-block;
+}
+
+.reviewListItem-orderList {
+  display:block;
+  color: rgba(0,0,0,.55);
 }

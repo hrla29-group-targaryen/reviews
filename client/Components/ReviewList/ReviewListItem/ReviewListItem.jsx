@@ -31,7 +31,7 @@ const ReviewListItem = (props) => {
       <div className="reviewListItem-stars">*****STARS GO HERE*****</div>
       <div className="reviewListItem-comments">{props.review.comments}</div><br />
 
-      {ordered}<br/>
+      <div className="reviewListItem-orderList">{ordered}</div><br/>
     </div>
   )
 }
