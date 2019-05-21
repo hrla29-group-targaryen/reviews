@@ -21,21 +21,24 @@ class App extends React.Component {
     let url = window.location.href;
     axios.get(url+'api/reviews')
       .then( data => {
-        //sort data by 'most recent' first
-        //TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
-        // let sortedData = sortReviews(data.data, 'Most recent');
-        this.setState({reviewData: data.data})
+        this.sortReviews('Most recent', data.data);
       })
       .catch(err => console.log('Error getting review data: ',err));
   }
 
-  sortReviews(method) {
+  sortReviews(method, data = this.state.reviewData) {
     if (method === 'Most recent') {
-      //sort this.state.reviewData by date (most recent)
-      
+      let sortedData = data.sort(function(a,b){
+        return new Date(b.date) - new Date(a.date);
+      })
+      this.setState({reviewData: sortedData})
+
     } else if (method === 'Highest rated') {
       //sort this.state.reviewData by starRating
-      
+      let sortedData = data.sort(function(a,b){
+        return b.starRating - a.starRating;
+      })
+      this.setState({reviewData: sortedData})
     }
   }
 
