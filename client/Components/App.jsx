@@ -21,6 +21,9 @@ class App extends React.Component {
     let url = window.location.href;
     axios.get(url+'api/reviews')
       .then( data => {
+        //sort data by 'most recent' first
+        //TODOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO
+        // let sortedData = sortReviews(data.data, 'Most recent');
         this.setState({reviewData: data.data})
       })
       .catch(err => console.log('Error getting review data: ',err));

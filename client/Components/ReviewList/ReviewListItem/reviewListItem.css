@@ -3,8 +3,8 @@
 */
 
 .reviewListItem-body {
-  background-color: #FBFBFC;
-  padding: 32px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .reviewListItem-avatar {

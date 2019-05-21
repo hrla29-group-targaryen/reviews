@@ -8,6 +8,8 @@
   line-height: 1.4;
   font-weight: 400;
   width: 1000px;
+  padding: 32px;
+  background-color: #FBFBFC;
 }
 
 .reviewList-sort {
