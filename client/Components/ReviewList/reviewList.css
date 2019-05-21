@@ -9,3 +9,82 @@
   font-weight: 400;
 }
 
+.reviewList-sort {
+  float: right;
+  display: flex;
+}
+
+.reviewList-sortText {
+  color: rgba(0,0,0,.55);
+  margin-right: 12px;
+  margin-top: 10px;
+  font-family: graphik;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.4;
+  float: right;
+  display: flex;
+}
+
+.reviewList-select {
+  margin-top: 0;
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+  color: rgba(0,0,0,.87);
+  -webkit-font-smoothing: antialiased;
+  box-sizing: inherit;
+}
+
+.reviewList-selectBox {
+  position: relative;
+  display: inline-block;
+  line-height: 1;
+
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: 2px solid rgba(0,0,0,.2);
+  border-radius: 4px;
+  background: #fff;
+  color: rgba(0,0,0,.87);
+  line-height: 1!important;
+  padding: 8px 32px 8px 12px;
+  transition: background .2s ease,border-color .2s ease;
+
+  font-family: graphik;
+  font-weight: 400;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+
+  overflow: visible !important;
+
+  align-items: center;
+  white-space: pre;
+  -webkit-rtl-ordering: logical;
+
+  text-rendering: auto;
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  text-align: start;
+  margin: 0em;
+
+  -webkit-writing-mode: horizontal-tb !important;
+  
+}
+
+.reviewList-selectBox:hover {
+  border-color: rgba(0,0,0,.7);
+}
+
+.reviewList-dropdownArrow {
+  width: 18px;
+  height: 15px;
+  float: right;
+  margin-right: 10px;
+}
