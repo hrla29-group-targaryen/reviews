@@ -7,7 +7,7 @@
   "scripts": {
     "build": "webpack -w -d",
     "start": "nodemon ./server/index.js",
-    "seed" : "node ./database/seed.js",
+    "seed": "node ./database/seed.js",
     "generateData": "node ./database/mockdata.js"
   },
   "engines": {
@@ -17,6 +17,7 @@
     "axios": "^0.18.0",
     "express": "^4.16.4",
     "faker": "^4.1.0",
+    "moment": "^2.24.0",
     "mongoose": "^5.5.8",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
