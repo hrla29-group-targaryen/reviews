@@ -21,7 +21,7 @@ const ReviewListItem = (props) => {
   //Ordered items
   let ordered;
   if (props.review.Ordered.length > 0) {
-    ordered = <div><div>{props.review.user.firstName} ordered:</div> {props.review.Ordered.map(function(order, index) {
+    ordered = <div><div className="reviewListItem-nameOrdered">{props.review.user.firstName} ordered:</div> {props.review.Ordered.map(function(order, index) {
       return <OrderItem order={order} key={index}/>
     })}</div>
   }
