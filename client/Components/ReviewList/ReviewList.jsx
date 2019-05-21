@@ -12,8 +12,9 @@ class ReviewList extends React.Component {
   }
 
   handleSortChange(e) {
-    let sortOption = e.target.value;
-    this.props.sortReviews(sortOption);
+    let sortMethod = e.target.value;
+    this.props.sortReviews(sortMethod);
+    this.setState({sortMethod})
   }
 
   render() {

@@ -29,7 +29,7 @@ class App extends React.Component {
   sortReviews(method) {
     if (method === 'Most recent') {
       //sort this.state.reviewData by date (most recent)
-
+      
     } else if (method === 'Highest rated') {
       //sort this.state.reviewData by starRating
       
