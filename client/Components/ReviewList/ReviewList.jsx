@@ -5,8 +5,7 @@ import './reviewList.css';
 const ReviewList = (props) => {
   return (
     <div>
-      <div className="reviewList-test">
-        Review List
+      <div className="reviewList-main">
         {props.reviewData.map(function (item, index) {
           return <ReviewListItem review={item} key={index} />
         })}

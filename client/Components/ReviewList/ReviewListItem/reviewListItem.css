@@ -3,7 +3,7 @@
 */
 
 .reviewListItem-body {
-  background-color: white;
+  background-color: #FBFBFC;
 }
 
 .reviewListItem-avatar {
@@ -50,4 +50,43 @@
 .reviewListItem-orderList {
   display:block;
   color: rgba(0,0,0,.55);
+}
+
+
+/************** Images **************/
+
+.reviewListItem-trophy {
+  width: 22px;
+  height: 22px;
+  margin-top: 5px;
+}
+.reviewListItem-blueStar {
+  width: 21px;
+  height: 18px;
+  margin-top: 5px;
+}
+.reviewListItem-oneStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+}
+.reviewListItem-twoStar {
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
+}
+.reviewListItem-threeStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+}
+.reviewListItem-fourStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+}
+.reviewListItem-fiveStar {
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
 }

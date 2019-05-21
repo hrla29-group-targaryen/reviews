@@ -2,8 +2,7 @@
   Use .reviewList- before the class name
 */
 
-.reviewList-test {
-  background-color: greenyellow;
+.reviewList-main {
   font-family: graphik;
   font-size: 14px;
   line-height: 1.4;
