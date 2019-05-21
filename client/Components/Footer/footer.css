@@ -2,7 +2,32 @@
   Use .footer- before the class name
 */
 
-.footer-test {
+.footer-body {
   background-color: #3231A9;
   color: white;
+  width: 1000px;
+}
+
+.footer-titleText {
+  display: inline-block;
+  width: 100%;
+  box-sizing: inherit;
+  font-size: 17.7px;
+  line-height: 1.51741;
+  font-family: grubhubsans-bold;
+  font-weight: 400;
+  position: relative;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  color: #cacaca;
+  text-decoration: none;
 }
