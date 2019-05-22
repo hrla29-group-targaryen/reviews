@@ -9,7 +9,6 @@ const port = 3200
 //serve the client with endpoint restaurant with specific restaurantID
 app.use('/restaurants/:restaurantID', express.static(path.join(__dirname, '../public')))
 
-
 app.get('/restaurants/:restaurantID/api/reviews', (req, res) => {
 
   const {restaurantID} = req.params;

@@ -1,0 +1,64 @@
+/* 
+  Use .reviewHeader- before the class name
+*/
+
+.reviewHeader-main {
+  font-family: graphik;
+  font-size: 14px;
+  line-height: 1.4;
+  font-weight: 400;
+  width: 1000px;
+  padding: 32px;
+  background-color: #FBFBFC;
+}
+
+.reviewHeader-title {
+  margin-top: 0;
+  font-size: 23.3px;
+  line-height: 1.37337;
+  font-family: grubhubsans-bold;
+  font-weight: bold;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.reviewHeader-fourStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+  display:block;
+}
+
+li {
+  flex: 0 0 33.33333%;
+  max-width: 33.33333%;
+  position: relative;
+    min-height: 1px;
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    box-sizing: inherit;
+    display: list-item;
+    text-align: -webkit-match-parent;
+    flex: 1;
+    flex-flow: row wrap;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.reviewHeader-caption {
+  white-space: normal;
+  color: rgba(0,0,0,.55);
+}
+
+.reviewHeader-ratings {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-size: 17.7px;
+  line-height: 1.51741;
+}
