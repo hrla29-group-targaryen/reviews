@@ -51,21 +51,23 @@ const ReviewHeader = (props) => {
       <h3 className="reviewHeader-title">Reviews for {props.restaurantData.name}</h3>
       <div>{starImage}</div>
       <div className="reviewHeader-numOfRatings">{numOfRatings} ratings</div>
-      <div>Here's what people are saying:</div>
-      <ul>
-        <li>
-          <span className="reviewHeader-ratings">{good}%</span>
-          <span className="reviewHeader-caption">Food was good</span>
-        </li>
-        <li>
-          <span className="reviewHeader-ratings">{timely}%</span>
-          <span className="reviewHeader-caption">Delivery was on time</span>
-        </li>
-        <li>
-          <span className="reviewHeader-ratings">{correct}%</span>
-          <span className="reviewHeader-caption">Order was accurate</span>
-        </li>
-      </ul>
+      <div className="reviewHeader-stats">
+        <div className="reviewHeader-statsTitle">Here's what people are saying:</div>
+        <ul className="reviewHeader-ul">
+          <li className="reviewHeader-li">
+            <span className="reviewHeader-ratings">{good}%</span>
+            <span className="reviewHeader-caption">Food was good</span>
+          </li>
+          <li className="reviewHeader-li">
+            <span className="reviewHeader-ratings">{timely}%</span>
+            <span className="reviewHeader-caption">Delivery was on time</span>
+          </li>
+          <li className="reviewHeader-li">
+            <span className="reviewHeader-ratings">{correct}%</span>
+            <span className="reviewHeader-caption">Order was accurate</span>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
