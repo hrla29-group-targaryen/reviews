@@ -24,30 +24,29 @@
   margin-inline-start: 0px;
   margin-inline-end: 0px;
 }
-
-.reviewHeader-fourStar {
-  width: 120px;
-  height: 28px;
-  margin-top: 5px;
-  display:block;
+.reviewHeader-numOfRatings {
+  color: rgba(0,0,0,.55);
+  font-size: 12px;
+  line-height: 1.45;
 }
+
 
 li {
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
   position: relative;
-    min-height: 1px;
-    width: 100%;
-    padding-left: 12px;
-    padding-right: 12px;
-    box-sizing: inherit;
-    display: list-item;
-    text-align: -webkit-match-parent;
-    flex: 1;
-    flex-flow: row wrap;
-    padding: 0;
-    margin: 0;
-    list-style: none;
+  min-height: 1px;
+  width: 100%;
+  padding-left: 12px;
+  padding-right: 12px;
+  box-sizing: inherit;
+  display: list-item;
+  text-align: -webkit-match-parent;
+  flex: 1;
+  flex-flow: row wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .reviewHeader-caption {
@@ -61,4 +60,55 @@ li {
   margin-bottom: 4px;
   font-size: 17.7px;
   line-height: 1.51741;
+}
+
+/**********star images******/
+
+.reviewHeader-oneStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-twoStar {
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-twohalfStar {
+  width: 120px;
+  height: 27px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-threeStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-threehalfStar {
+  width: 120px;
+  height: 23px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-fourStar {
+  width: 120px;
+  height: 28px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-fourhalfStar {
+  width: 120px;
+  height: 26px;
+  margin-top: 5px;
+  display:block;
+}
+.reviewHeader-fiveStar {
+  width: 120px;
+  height: 30px;
+  margin-top: 5px;
+  display:block;
 }
