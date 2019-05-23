@@ -3,13 +3,13 @@
 */
 
 .reviewList-main {
-  font-family: graphik;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
   width: 1000px;
   padding: 32px;
   background-color: #FBFBFC;
+  font-family: 'Roboto', sans-serif;
 }
 
 .reviewList-sort {
@@ -22,7 +22,7 @@
   color: rgba(0,0,0,.55);
   margin-right: 12px;
   margin-top: 10px;
-  font-family: graphik;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.4;
@@ -57,7 +57,7 @@
   padding: 8px 32px 8px 12px;
   transition: background .2s ease,border-color .2s ease;
 
-  font-family: graphik;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   display: block;
@@ -98,6 +98,7 @@
   font-size: 14px;
   margin-bottom: 24px;
   padding: 8px 12px;
+  display: block;
 }
 
 .reviewList-a {
@@ -115,3 +116,31 @@
   padding-left: 7px;
   color: rgba(0,0,0,.87);
 }
+
+.reviewList-viewAllButton {
+  color: #0070eb;
+  background: 0 0;
+  border-color: #0070eb;
+  border-radius: 4px;
+  padding: 8px 16px 7px;
+  text-align: center;
+  vertical-align: middle;
+  white-space: nowrap;
+  background: 0 0;
+  border: 2px solid;
+  transition: background .2s ease,border-color .2s ease,color .2s ease;
+  text-size-adjust: 100%;
+  float: right;
+  font-size: 15.4px;
+  line-height: 1.595;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.reviewList-viewAllButton:hover {
+  border-color: #0058b8;
+  color: #0058b8;
+  text-decoration: none;
+  cursor: pointer;
+}
+

@@ -3,7 +3,7 @@
 */
 
 .reviewHeader-main {
-  font-family: graphik;
+  font-family: 'Roboto', sans-serif;
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
@@ -17,8 +17,8 @@
   margin-top: 0;
   font-size: 23.3px;
   line-height: 1.37337;
-  font-family: grubhubsans-bold;
-  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
   display: block;
   margin-block-start: 1em;
   margin-block-end: 1em;
@@ -60,6 +60,7 @@
 .reviewHeader-caption {
   white-space: normal;
   color: rgba(0,0,0,.55);
+  font-size: 12px;
 }
 
 .reviewHeader-ratings {
@@ -68,7 +69,7 @@
   margin-bottom: 4px;
   font-size: 17.7px;
   line-height: 1.51741;
-  font-weight: bold;
+  font-weight: 900;
   max-width: 50px;
 }
 

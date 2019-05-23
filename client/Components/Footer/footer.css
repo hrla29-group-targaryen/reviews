@@ -6,6 +6,7 @@
   background-color: #3231A9;
   color: white;
   width: 1000px;
+  font-family: 'Roboto', sans-serif;
 }
 
 .footer-bottomHalf {
@@ -17,14 +18,14 @@
 }
 
 
-.footer-titleText {
+.footer-collapsibletitleText {
   display: inline-block;
   width: 100%;
   box-sizing: inherit;
   font-size: 17.7px;
   line-height: 1.51741;
-  font-family: grubhubsans-bold;
-  font-weight: 400;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
   position: relative;
 }
 
@@ -47,6 +48,9 @@
 .footer-a {
   color: white;
   display: inline-block;
+  font-size: 14px;
+  line-height: 1.45;
+  font-weight: 100;
 }
 
 .footer-a:hover {
