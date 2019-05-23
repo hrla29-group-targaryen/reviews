@@ -30,19 +30,26 @@
   box-sizing: inherit;
 }
 
-/* .reviewListItem-userInfo {
-  display: block;
+.reviewListItem-avatarContainer {
+  margin-right: 12px;
+  margin-bottom: 8px;
+  float: left;
+}
+
+.reviewListItem-userInfo {
+  display: inline-block;
   position: relative;
   min-height: 1px;
-  width: 100%;
+  width:90%;
   flex: 0 0 100%;
   max-width: 100%;
   flex-shrink: 1;
-} */
+  white-space: nowrap;
+  overflow-x: auto;
+}
 
 .reviewListItem-nameAndDate {
-  justify-content: space-between;
-  /* display: flex; */
+  
 }
 
 .reviewListItem-firstName {
@@ -60,13 +67,19 @@
   display: inline-block;
 }
 
+.reviewListItem-reviewImage{
+  display: inline-block;
+}
+
 .reviewListItem-reviewStatus {
   display: inline-block;
   color: rgba(0, 0, 0, 0.87);
+  font-size: 12px;
 }
 
 .reviewListItem-comments {
   display: inline-block;
+  font-weight: lighter;
 }
 
 .reviewListItem-nameOrdered {

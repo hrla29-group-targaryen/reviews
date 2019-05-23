@@ -41,7 +41,9 @@ class ReviewList extends React.Component {
           {this.props.reviewData.map(function (item, index) {
             return <ReviewListItem review={item} key={index} />
           })}
-          <button className="reviewList-viewAllButton">View all reviews</button><br/>
+          <div className="reviewList-buttonContainer">
+            <button className="reviewList-viewAllButton">View all reviews</button>
+          </div>
           <div className="reviewList-bottom">
             <a className="reviewList-a" href="">Grubhub</a> / 
             <a className="reviewList-a" href="">{randomCity}</a> / 

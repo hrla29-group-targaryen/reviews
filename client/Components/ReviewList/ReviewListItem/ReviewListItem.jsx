@@ -56,13 +56,15 @@ const ReviewListItem = (props) => {
   return (
     <div className="reviewListItem-body">
       <div className="reviewListItem-header">
-        <div className="reviewListItem-avatar">{props.review.user.firstLetter}</div>
+        <div className="reviewListItem-avatarContainer">
+          <div className="reviewListItem-avatar">{props.review.user.firstLetter}</div>
+        </div>
         <div className="reviewListItem-userInfo">
           <div className="reviewListItem-nameAndDate">
             <div className="reviewListItem-firstName">{props.review.user.firstName}</div>
             <div className="reviewListItem-date">{dateDisplay}</div><br />
           </div>
-          {reviewImage}
+          <div className="reviewListItem-reviewImage">{reviewImage}</div>
           <div className="reviewListItem-reviewStatus">{reviewStatus}</div><br />
         </div>
       </div>

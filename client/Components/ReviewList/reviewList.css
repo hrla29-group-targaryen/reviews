@@ -16,6 +16,9 @@
   float: right;
   display: flex;
   justify-content: flex-end;
+  width: 100%;
+  margin-bottom: 15px;
+  margin-right: 43px;
 }
 
 .reviewList-sortText {
@@ -120,6 +123,14 @@
   color: rgba(0,0,0,.87);
 }
 
+.reviewList-buttonContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: right;
+  border-top: 1px solid rgba(0,0,0,.2);
+  height: 100px;
+}
+
 .reviewList-viewAllButton {
   color: #0070eb;
   background: 0 0;
@@ -137,7 +148,7 @@
   font-size: 15.4px;
   line-height: 1.595;
   font-weight: bold;
-  margin-bottom: 10px;
+  margin-right: 60px;
 }
 
 .reviewList-viewAllButton:hover {
