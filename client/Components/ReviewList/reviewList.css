@@ -51,7 +51,6 @@
   box-shadow: none;
   border: 2px solid rgba(0,0,0,.2);
   border-radius: 4px;
-  background: #fff;
   color: rgba(0,0,0,.87);
   line-height: 1!important;
   padding: 8px 32px 8px 12px;
@@ -80,6 +79,7 @@
 
   -webkit-writing-mode: horizontal-tb !important;
   
+  background:#fff;
 }
 
 .reviewList-selectBox:hover {
@@ -90,7 +90,10 @@
   width: 18px;
   height: 15px;
   float: right;
-  margin-right: 10px;
+  top: calc(50% - 8px);
+  right: 8px;
+  pointer-events: none;
+  position: absolute;
 }
 
 .reviewList-bottom {
