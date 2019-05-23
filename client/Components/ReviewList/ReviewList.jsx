@@ -57,7 +57,7 @@ class ReviewList extends React.Component {
               <img className="reviewList-dropdownArrow" src="grubhubDropdownArrow.png" alt="dropdownArrow"></img>
             </div>
           </div><br/>
-          {reviews}
+            {reviews}
           <div className="reviewList-buttonContainer">
             {viewAllButton}
           </div>
