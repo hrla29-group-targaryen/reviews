@@ -7,9 +7,12 @@ class ReviewList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sortMethod: 'Most recent'
+      sortMethod: 'Most recent',
+      numOfReviewsDisplayed: 5,
+      showViewAllButton: true
     }
     this.handleSortChange = this.handleSortChange.bind(this);
+    this.handleViewAllClick = this.handleViewAllClick.bind(this);
   }
 
   handleSortChange(e) {
@@ -18,12 +21,28 @@ class ReviewList extends React.Component {
     this.setState({sortMethod})
   }
 
+  handleViewAllClick(e) {
+    e.preventDefault();
+    this.setState({
+      numOfReviewsDisplayed: Infinity,
+      showViewAllButton: false
+    })
+  }
+
   render() {
-    let randomCity = faker.address.city();
-    let neighborhoods = ['Mid-City West', 'Downtown', 'View Park', 'Westmont', 'Mount Washington',
-    'Monterey Hills', 'Mar Vista', 'Lincoln Heights', 'Eagle Rock', 'Union Square', 'South Village',
-    'East Harbor'];
-    let randomNeighborhood = neighborhoods[Math.floor(Math.random() * neighborhoods.length)];
+    let viewAllButton;
+    if (this.state.showViewAllButton === true) {
+      viewAllButton = <button className="reviewList-viewAllButton" onClick={this.handleViewAllClick}>View all reviews</button>
+    } else {
+      viewAllButton = undefined;
+    }
+    let context = this;
+    let reviews = this.props.reviewData.map(function (item, index) {
+      if (index < context.state.numOfReviewsDisplayed) {
+        return <ReviewListItem review={item} key={index} />
+      }
+    });
+
 
     return (
       <div>
@@ -38,16 +57,14 @@ class ReviewList extends React.Component {
               <img className="reviewList-dropdownArrow" src="grubhubDropdownArrow.png" alt="dropdownArrow"></img>
             </div>
           </div><br/>
-          {this.props.reviewData.map(function (item, index) {
-            return <ReviewListItem review={item} key={index} />
-          })}
+          {reviews}
           <div className="reviewList-buttonContainer">
-            <button className="reviewList-viewAllButton">View all reviews</button>
+            {viewAllButton}
           </div>
           <div className="reviewList-bottom">
             <a className="reviewList-a" href="">Grubhub</a> / 
-            <a className="reviewList-a" href="">{randomCity}</a> / 
-            <a className="reviewList-a" href="">{randomNeighborhood}</a> / 
+            <a className="reviewList-a" href="">Los Angeles</a> / 
+            <a className="reviewList-a" href="">Santa Monica</a> / 
             <span className="reviewList-restaurantName">{this.props.restaurantData.name}</span>
           </div>
         </div>
