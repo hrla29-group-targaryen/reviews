@@ -27,8 +27,6 @@ app.post('/restaurants/api/reviews', (req, res) => {
   
   const {Ordered, user, reviewID, restaurantID, starRating, comments, date} = req.body;
 
-  console.log(req.body)
-
   ReviewList.create({Ordered, user, reviewID, restaurantID, starRating, comments, date})
     .then(() => res.status(201).send('Success posting review'))
     .catch(err => res.status(404).send(err));
