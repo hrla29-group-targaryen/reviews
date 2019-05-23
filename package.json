@@ -10,7 +10,8 @@
     "seed": "node ./database/seed.js",
     "generateData": "node ./database/mockdata.js",
     "test": "jest",
-    "test:w": "jest --watchAll"
+    "test:w": "jest --watchAll",
+    "test:c": "jest --coverage"
   },
   "engines": {
     "node": ">=6.13.0"
@@ -50,5 +51,11 @@
     "moduleNameMapper": {
       "\\.(css|less)$": "identity-obj-proxy"
     }
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
   }
 }
