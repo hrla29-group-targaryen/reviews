@@ -34,6 +34,7 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.13.1",
     "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^24.8.0",
     "live-server": "^1.2.1",
     "nodemon": "^1.19.0",
@@ -43,6 +44,11 @@
     "webpack-cli": "^3.3.2"
   },
   "jest": {
-    "setupFilesAfterEnv": ["<rootDir>client/setupTests.js"]
+    "setupFilesAfterEnv": [
+      "<rootDir>client/setupTests.js"
+    ],
+    "moduleNameMapper": {
+      "\\.(css|less)$": "identity-obj-proxy"
+    }
   }
 }

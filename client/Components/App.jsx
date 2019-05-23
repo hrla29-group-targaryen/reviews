@@ -29,6 +29,7 @@ class App extends React.Component {
       })
       .catch(err => console.log('Error getting review data: ',err));
   }
+  
   getRestaurantDataByRestaurantID(data) {
     //get the restaurant id by looking at the restaurantID of the first review (assuming there is at least one review)
     let id = data[0].restaurantID;
