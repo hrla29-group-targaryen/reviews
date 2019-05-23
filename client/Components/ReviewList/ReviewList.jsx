@@ -20,6 +20,10 @@ class ReviewList extends React.Component {
 
   render() {
     let randomCity = faker.address.city();
+    let neighborhoods = ['Mid-City West', 'Downtown', 'View Park', 'Westmont', 'Mount Washington',
+    'Monterey Hills', 'Mar Vista', 'Lincoln Heights', 'Eagle Rock', 'Union Square', 'South Village',
+    'East Harbor'];
+    let randomNeighborhood = neighborhoods[Math.floor(Math.random() * neighborhoods.length)];
 
     return (
       <div>
@@ -40,6 +44,7 @@ class ReviewList extends React.Component {
           <div className="reviewList-bottom">
             <a className="reviewList-a" href="">Grubhub</a> / 
             <a className="reviewList-a" href="">{randomCity}</a> / 
+            <a className="reviewList-a" href="">{randomNeighborhood}</a> / 
             <span className="reviewList-restaurantName">{this.props.restaurantData.name}</span>
           </div>
         </div>
