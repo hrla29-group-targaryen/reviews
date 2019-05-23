@@ -17,15 +17,7 @@ const ReviewListItem = (props) => {
     reviewStatus = props.review.user.numOfRatings + ' reviews';
     reviewImage = <img className="reviewListItem-blueStar" src="grubhubBlueStar.png" alt="blueStar"></img>
   }
-
-  //Ordered items
-  let ordered;
-  if (props.review.Ordered.length > 0) {
-    ordered = <div><div className="reviewListItem-nameOrdered">{props.review.user.firstName} ordered:</div> {props.review.Ordered.map(function(order, index) {
-      return <OrderItem order={order} key={index}/>
-    })}</div>
-  }
-
+  
   //starRating image
   let starImage;
   let numStars = props.review.starRating;
@@ -41,12 +33,32 @@ const ReviewListItem = (props) => {
     starImage = <img className="reviewListItem-fiveStar" src="grubhub5star.png" alt="5star"></img>
   }
 
+  //Check to see if date is within the last 30 days
+  let todaysDate = new Date();
+  let reviewDate = new Date(props.review.date);
+  let daysBetween = (todaysDate.getTime() - reviewDate.getTime())/(1000*60*60*24.0);
+  //then display the date differently based on if it is within the past 31 days or not
+  let dateDisplay;
+  if (daysBetween <= 31) {
+    dateDisplay = moment(props.review.date).fromNow();
+  } else {
+    dateDisplay = moment(props.review.date).format('MMM Do, YYYY');
+  }
+  
+  //Ordered items
+  let ordered;
+  if (props.review.Ordered.length > 0) {
+    ordered = <div><div className="reviewListItem-nameOrdered">{props.review.user.firstName} ordered:</div> {props.review.Ordered.map(function(order, index) {
+      return <OrderItem order={order} key={index}/>
+    })}</div>
+  }
+
   return (
     <div className="reviewListItem-body">
       <div className="reviewListItem-header">
         <div className="reviewListItem-avatar">{props.review.user.firstLetter}</div>
         <div className="reviewListItem-firstName">{props.review.user.firstName}</div>
-        <div className="reviewListItem-date">{moment(props.review.date).format('MMM Do, YYYY')}</div><br />
+        <div className="reviewListItem-date">{dateDisplay}</div><br />
         {reviewImage}
         <div className="reviewListItem-reviewStatus">{reviewStatus}</div><br />
       </div>
