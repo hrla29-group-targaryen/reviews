@@ -7,6 +7,11 @@
   padding-bottom: 15px;
 }
 
+.reviewListItem-header {
+  flex-direction: row;
+  /* display: flex; */
+}
+
 .reviewListItem-avatar {
   border-radius: 50%;
   color: #fff;
@@ -22,6 +27,21 @@
   font-weight:bold;
   line-height: 1.45;
   box-sizing: inherit;
+}
+
+/* .reviewListItem-userInfo {
+  display: block;
+  position: relative;
+  min-height: 1px;
+  width: 100%;
+  flex: 0 0 100%;
+  max-width: 100%;
+  flex-shrink: 1;
+} */
+
+.reviewListItem-nameAndDate {
+  justify-content: space-between;
+  /* display: flex; */
 }
 
 .reviewListItem-firstName {

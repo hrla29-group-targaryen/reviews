@@ -57,10 +57,14 @@ const ReviewListItem = (props) => {
     <div className="reviewListItem-body">
       <div className="reviewListItem-header">
         <div className="reviewListItem-avatar">{props.review.user.firstLetter}</div>
-        <div className="reviewListItem-firstName">{props.review.user.firstName}</div>
-        <div className="reviewListItem-date">{dateDisplay}</div><br />
-        {reviewImage}
-        <div className="reviewListItem-reviewStatus">{reviewStatus}</div><br />
+        <div className="reviewListItem-userInfo">
+          <div className="reviewListItem-nameAndDate">
+            <div className="reviewListItem-firstName">{props.review.user.firstName}</div>
+            <div className="reviewListItem-date">{dateDisplay}</div><br />
+          </div>
+          {reviewImage}
+          <div className="reviewListItem-reviewStatus">{reviewStatus}</div><br />
+        </div>
       </div>
       {starImage}
       <div className="reviewListItem-comments">{props.review.comments}</div><br />
