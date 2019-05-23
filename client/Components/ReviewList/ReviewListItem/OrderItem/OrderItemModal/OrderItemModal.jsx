@@ -2,52 +2,42 @@ import React from 'react'
 import ReactDOM from "react-dom"
 import './orderItemModal.css'
 
-class OrderItemModal extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-
-    }
-  }
-
-  render() {
-    return (
-      this.props.open
-        ? ReactDOM.createPortal(
-          <div className="modal">
-            <table className="menu-modal-container">
-              <tbody>
-                <tr>
-                  <td valign="top">
-                    <div className='modal-menu-item' style={{ backgroundImage: '' }}>
-                      <p className='modal-menu-item-content'>{this.props.name}<br />{this.props.price}</p>
-                      <div className='modal-close' onClick={this.props.onClose}>&times;</div>
-                    </div>
-                    <div className='modal-menu-item-description'>{}</div>
-                    <div className='modal-menu-item-quantity'>
-                      <b>Quantity</b>
-                      <span>-</span>
-                      <input type="text" maxLength="2" />
-                      <span className="tooltip">+</span>
-                    </div>
-                    <div className='modal-menu-item-special'><b>Special Instructions</b><br></br>
-                      <textarea className='instruction' maxLength="400" placeholder="Dressing on the side? No pickles? Let us know here." ></textarea>
-                    </div>
-                  </td>
-                </tr>
-                <tr>
-                  <td valign="bottom">
-                    <div className='bag-bar'><button className='menu-modal-button'>Add to bag: {this.props.price}</button></div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>,
-          document.body
-        )
-        : null
-    )
-  }
+const OrderItemModal = (props) => {
+  return (
+    props.open ?
+      ReactDOM.createPortal(
+        <div className="orderItemModal-main">
+          <table className="orderItemModal-container">
+            <tbody>
+              <tr>
+                <td className="orderItemModal-td" valign="top">
+                  <div className='orderItemModal-item'>
+                    <p className='orderItemModal-content'>{props.name}<br />{props.price}</p>
+                    <div className='orderItemModal-close' onClick={props.onClose}>&times;</div>
+                  </div>
+                  <div className='orderItemModal-quantity'>
+                    <b>Quantity</b>
+                    <span className="orderItemModal-subtract"> - </span>
+                    <input className="orderItemModal-quantityInput" type="text" maxLength="2" value="1" />
+                    <span className="orderItemModal-add"> + </span>
+                  </div>
+                  <div className='orderItemModal-special'><b>Special Instructions</b><br></br>
+                    <textarea className='orderItemModal-instruction' maxLength="400" placeholder="Dressing on the side? No pickles? Let us know here." ></textarea>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="orderItemModal-td" valign="bottom">
+                  <div className='orderItemModal-addToBag'><button className='orderItemModal-button'>Add to bag: {props.price}</button></div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>,
+        document.body
+      )
+      : null
+  )
 }
 
 export default OrderItemModal;

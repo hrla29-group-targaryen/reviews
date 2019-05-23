@@ -1,4 +1,8 @@
-.modal{
+/* 
+  Use .orderItemModal- before the class name
+*/
+
+.orderItemModal-main{
   position: fixed;
   top: 0;
   right: 0;
@@ -11,7 +15,7 @@
   animation: .15s flyDown ease forwards;
 }
 
-.modal-close{
+.orderItemModal-close{
   width: 10px;
   padding : 11.5px 0 0 28px;
   color: blue;
@@ -19,8 +23,8 @@
   cursor: pointer;
 }
 
-.menu-modal-container{
-  height: 87%;
+.orderItemModal-container{
+  height: 71%;
   width:50%;
   background-color: #fff;
   border-radius: 3px;
@@ -28,9 +32,10 @@
   overflow: hidden;
   margin: 1.5% auto;
   /* padding: 0px 0px 28px 28px; */
+  border-collapse: collapse;
 }
 
-.bag-bar{
+.orderItemModal-addToBag{
   /* margin-right: 0;
   margin-left: 0; */
   position: absolute;
@@ -42,7 +47,7 @@
   height: 3em;
 }
 
-.menu-modal-button{
+.orderItemModal-button{
   background-color: #0F70EB;
   width: 40%;
   height: 44px;
@@ -54,23 +59,15 @@
   font-size: 0.93em;
 }
 
-.menu-modal-container tr { display: block; }
-
-.menu-modal-container tr {
-  max-height: 90%;    
-  overflow-y: auto;   
-  overflow-x: hidden; 
-}
-
-.modal-menu-item {
+.orderItemModal-item {
   width: 800px;
-  height: 250px;
+  height: 135px;
   position: relative;
   /* background-size: cover; */
   margin: 0
 }
 
-.modal-menu-item-content{
+.orderItemModal-content{
   display: inline-block;
   vertical-align: top;
   color: rgba(0,0,0,.87);
@@ -81,38 +78,26 @@
   position: absolute;
   left: 23px;
   bottom: 15px;
-  padding: 10px 15px;
+  padding: 10px 15px 0px 15px;
   z-index: 1;
   background-color: rgb(255,255,255,0.5);
-  margin: 0.5em 0.1em;
+  margin: 0.5em 0.1em 0 0.1em;
   width: 40%;
   text-align: left;
   border-radius: 0.2em;
 }
 
-.modal-menu-item-description{
-  margin: 16px 30px;
-  font-weight: 300;
+.orderItemModal-quantity{
   font-family:'Roboto', sans-serif;
-  /* font-size: 20px; */
+  margin: 0px 30px;
 }
 
-.modal-menu-item-quantity{
-  font-family:'Roboto', sans-serif;
-  margin: 16px 30px;
-}
-
-.modal-menu-item-options{
+.orderItemModal-special{
   font-family:'Roboto', sans-serif;
   margin: 16px 30px
 }
 
-.modal-menu-item-special{
-  font-family:'Roboto', sans-serif;
-  margin: 16px 30px
-}
-
-.instruction{
+.orderItemModal-instruction{
   width: 680px;
   min-height: 150px;
   margin: 10px 0 0 0;
@@ -125,31 +110,14 @@
   font-weight: 300;
 }
 
-input[type='checkbox'] {
-  zoom: 1.3;
-  -webkit-transform: scale(1.3);
-  /* -webkit-transform-origin: 0 0; */
-  left: 2px;
-  margin: 0 2px 0 0;
-  position: relative;
-}
-
-.nglg_checkbox{
-  margin-right: 1em;
-}
-
-td {
+.orderItemModal-td {
   padding: 0;
 }
 
-table {
-  border-collapse: collapse;
-}
-
-.tooltip{
+.orderItemModal-subtract, .orderItemModal-add{
   border: 2px solid #0070eb;
   color: #0070eb;
-  font-weight: bolder;
+  font-weight: 900;
   padding: 0.3em;
   border-radius: 1.2em;
   width: 1.2em;
@@ -160,11 +128,16 @@ table {
   margin: 0.4em;
 }
 
-.menu-modal-button:hover, .tooltip:hover, input[type='checkbox']:hover{
+.orderItemModal-subtract{
+  border: 2px solid rgba(0,0,0,.2);
+  color: rgba(0,0,0,.2);
+}
+
+.orderItemModal-button:hover, .orderItemModal-subtract:hover, .orderItemModal-add:hover{
   cursor: pointer
 }
 
-.quantity-input{
+.orderItemModal-quantityInput{
       width: 44px;
       height: 32px;
       padding: 0;
