@@ -1,5 +1,6 @@
 import React from 'react';
 import ReviewListItem from './ReviewListItem/ReviewListItem.jsx';
+import faker from 'faker';
 import './reviewList.css';
 
 class ReviewList extends React.Component {
@@ -18,6 +19,8 @@ class ReviewList extends React.Component {
   }
 
   render() {
+    let randomCity = faker.address.city();
+
     return (
       <div>
         <div className="reviewList-main">
@@ -34,6 +37,11 @@ class ReviewList extends React.Component {
           {this.props.reviewData.map(function (item, index) {
             return <ReviewListItem review={item} key={index} />
           })}
+          <div className="reviewList-bottom">
+            <a className="reviewList-a" href="">Grubhub</a> / 
+            <a className="reviewList-a" href="">{randomCity}</a> / 
+            <span className="reviewList-restaurantName">{this.props.restaurantData.name}</span>
+          </div>
         </div>
       </div>
     )

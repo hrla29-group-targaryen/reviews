@@ -61,7 +61,7 @@ class App extends React.Component {
     return (
       <div>
         <ReviewHeader restaurantData={this.state.restaurantData}/>
-        <ReviewList reviewData={this.state.reviewData} sortReviews={this.sortReviews}/>
+        <ReviewList reviewData={this.state.reviewData} sortReviews={this.sortReviews} restaurantData={this.state.restaurantData}/>
         <Footer />
       </div>
     )
