@@ -5,7 +5,7 @@ const Footer = (props) => {
   return (
     <div className="footer-body">
       <div className="footer-topHalf">
-        <section className="footer-collapsibleSection col-1-4">
+        <div className="footer-collapsibleSection col-1-4">
           <span className="footer-collapsibletitleText">Get to know us</span>
           <div className="footer-collapsibleContent">
             <ul>
@@ -17,8 +17,8 @@ const Footer = (props) => {
               <li className="footer-li"><a className="footer-a" href="">News</a></li>
             </ul>
           </div>
-        </section>
-        <section className="footer-collapsibleSection col-1-4">
+        </div>
+        <div className="footer-collapsibleSection col-1-4">
           <span className="footer-collapsibletitleText">Useful links</span>
           <div className="footer-collapsibleContent">
             <ul className="footer-ul">
@@ -30,8 +30,8 @@ const Footer = (props) => {
               <li className="footer-li"><a className="footer-a" href="">Student discounts</a></li>
             </ul>
           </div>
-        </section>
-        <section className="footer-collapsibleSection col-1-4">
+        </div>
+        <div className="footer-collapsibleSection col-1-4">
           <span className="footer-collapsibletitleText">Connect with us</span>
           <div className="footer-collapsibleContent">
             <ul>
@@ -41,8 +41,8 @@ const Footer = (props) => {
               <li className="footer-li"><a className="footer-a" href="">YouTube</a></li>
             </ul>
           </div>
-        </section>
-        <section className="footer-collapsibleSection col-1-4">
+        </div>
+        <div className="footer-collapsibleSection col-1-4">
           <span className="footer-collapsibletitleText">Partner with us</span>
           <div className="footer-collapsibleContent">
             <ul>
@@ -51,19 +51,12 @@ const Footer = (props) => {
               <li className="footer-li"><a className="footer-a" href="">For corporate accounts</a></li>
             </ul>
           </div>
-        </section>
-
+        </div>
       </div>
       <div className="footer-bottomHalf">
-        <div className="footer-divider">
-        </div>
-        <div>
-          <p>© 2019 Grubhub All rights reserved.</p>
-        </div>
-        <div>
-          <a className="footer-a" href="">Terms of Use</a><br />
-          <a className="footer-a" href="">Privacy Policy</a>
-        </div>
+          <div className="footer-copyright">© 2019 Grubhub All rights reserved.</div>
+          <a className="footer-a footer-terms" href="">Terms of Use</a><br />
+          <a className="footer-a footer-privacy" href="">Privacy Policy</a>
       </div>
     </div>
   )

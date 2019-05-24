@@ -5,18 +5,28 @@
 .footer-body {
   background-color: #3231A9;
   color: white;
-  width: 1000px;
+  width: 1050px;
+  height: 400px;
   font-family: 'Roboto', sans-serif;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  display: block;
+  padding-left: 0;
+  padding-right: 0;
 }
 
-.footer-bottomHalf {
- 
+.footer-topHalf {
+  background-color: #3231A9;
+  display: block;
+  height: 200px;
+  border-bottom: 1px solid hsla(0,0%,100%,.4);
+  padding: 32px;
 }
 
 .footer-collapsibleSection {
-  
+  position: relative;
+  display: block;
 }
-
 
 .footer-collapsibletitleText {
   display: inline-block;
@@ -27,6 +37,7 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 900;
   position: relative;
+  padding-left: 40px;
 }
 
 .footer-li {
@@ -65,14 +76,12 @@
   vertical-align: top;
 }
 
-.footer-topHalf,
 .col-1-4 {
   padding-left: 0px;
   padding-right: 0px;
   float:left;
 }
-.container,
-.footer-topHalf {
+.container{
   margin: 0 auto;
   width: 960px;
 }
@@ -81,17 +90,24 @@
   padding-right: 30px;
 }
 
+/* Bottom half */
 
+.footer-bottomHalf {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80px;
+}
 
-.footer-divider {
-  border: 0;
-  height: 1px;
-  background: hsla(0,0%,100%,.4);
-  display: block;
-  unicode-bidi: isolate;
-  margin-block-start: 0.5em;
-  margin-block-end: 0.5em;
-  margin-inline-start: auto;
-  margin-inline-end: auto;
-  overflow: hidden;
+.footer-copyright {
+  padding-right: 300px;
+  padding-left: 50px;
+  padding-top: 40px;
+}
+.footer-terms {
+  padding-left: 50px;
+  padding-top: 40px;
+}
+.footer-privacy {
+  padding-left: 50px;
+  padding-top: 40px;
 }
