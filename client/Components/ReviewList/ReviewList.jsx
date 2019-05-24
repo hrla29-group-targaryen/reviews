@@ -37,11 +37,20 @@ class ReviewList extends React.Component {
       viewAllButton = undefined;
     }
     let context = this;
-    let reviews = this.props.reviewData.map(function (item, index) {
-      if (index < context.state.numOfReviewsDisplayed) {
-        return <ReviewListItem review={item} key={index} />
-      }
-    });
+    let reviews;
+    
+    if (this.props.reviewData) {
+      reviews = this.props.reviewData.map(function (item, index) {
+        if (index < context.state.numOfReviewsDisplayed) {
+          return <ReviewListItem review={item} key={index} />
+        }
+      });
+    }
+
+    let restaurantName;
+    if (this.props.restaurantData) {
+      restaurantName = this.props.restaurantData.name;
+    }
 
 
     return (
@@ -65,7 +74,7 @@ class ReviewList extends React.Component {
             <a className="reviewList-a" href="">Grubhub</a> / 
             <a className="reviewList-a" href="">Los Angeles</a> / 
             <a className="reviewList-a" href="">Santa Monica</a> / 
-            <span className="reviewList-restaurantName">{this.props.restaurantData.name}</span>
+            <span className="reviewList-restaurantName">{restaurantName}</span>
           </div>
         </div>
       </div>
