@@ -7,12 +7,17 @@ const ReviewHeader = (props) => {
   let good;
   let timely;
   let correct;
-  if (props.restaurantData.ratings) {
-    numOfRatings = props.restaurantData.ratings.number
-    stars = props.restaurantData.ratings.stars
-    good = props.restaurantData.ratings.good
-    timely = props.restaurantData.ratings.timely
-    correct = props.restaurantData.ratings.correct
+  let name;
+  if (props.restaurantData) {
+    name = props.restaurantData.name;
+    if (props.restaurantData.ratings) {
+      numOfRatings = props.restaurantData.ratings.number
+      stars = props.restaurantData.ratings.stars
+      good = props.restaurantData.ratings.good
+      timely = props.restaurantData.ratings.timely
+      correct = props.restaurantData.ratings.correct
+    }
+
   }
 
   let starImage;
@@ -48,7 +53,7 @@ const ReviewHeader = (props) => {
 
   return (
     <div className="reviewHeader-main">
-      <h3 className="reviewHeader-title">Reviews for {props.restaurantData.name}</h3>
+      <h3 className="reviewHeader-title">Reviews for {name}</h3>
       <div>{starImage}</div>
       <div className="reviewHeader-numOfRatings">{numOfRatings} ratings</div>
       <div className="reviewHeader-stats">
