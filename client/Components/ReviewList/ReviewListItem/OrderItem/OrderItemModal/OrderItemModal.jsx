@@ -32,7 +32,7 @@ render() {
               <tr>
                 <td className="orderItemModal-td" valign="top">
                   <div className='orderItemModal-item'>
-                    <p className='orderItemModal-content'>{this.props.name}<br />{this.props.price}</p>
+                    <p className='orderItemModal-content'>{this.props.name}<br />${this.props.price}</p>
                     <div className='orderItemModal-close' onClick={this.props.onClose}>&times;</div>
                   </div>
                   <div className='orderItemModal-quantity'>
@@ -48,7 +48,7 @@ render() {
               </tr>
               <tr>
                 <td className="orderItemModal-td" valign="bottom">
-                  <div className='orderItemModal-addToBag'><button className='orderItemModal-button'>Add to bag: {this.props.price}</button></div>
+                  <div className='orderItemModal-addToBag'><button className='orderItemModal-button'>Add to bag: ${(this.props.price * this.state.quantity).toFixed(2)}</button></div>
                 </td>
               </tr>
             </tbody>
