@@ -22,8 +22,11 @@ class App extends React.Component {
   }
 
   getReviewsForRestaurantID() {
-    let url = window.location.href;
-    axios.get(url+'api/reviews')
+    let id = window.location.href.split("id=")[1];
+    // console.log(id); //undefined
+    // let url = window.location.href;
+    axios.get(`http://localhost:3200/restaurants/api/reviews/${id}`)
+    // axios.get(url+'api/reviews')
       .then( data => {
         this.sortReviews('Most recent', data.data);
       })

@@ -63,7 +63,7 @@ class ReviewList extends React.Component {
                 <option value="Most recent">Most recent</option>
                 <option value="Highest rated">Highest rated</option>
               </select>
-              <img className="reviewList-dropdownArrow" src="grubhubDropdownArrow.png" alt="dropdownArrow"></img>
+              <img className="reviewList-dropdownArrow" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhubDropdownArrow.png" alt="dropdownArrow"></img>
             </div>
           </div><br/>
             {reviews}

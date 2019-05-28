@@ -22,26 +22,26 @@ const ReviewHeader = (props) => {
 
   let starImage;
   if (stars === 5) {
-    starImage = <img className="reviewHeader-fiveStar" src="grubhub5star.png" alt="5star"></img>
+    starImage = <img className="reviewHeader-fiveStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub5star.png" alt="5star"></img>
   } 
   else if (stars === 4.5) {
-    starImage = <img className="reviewHeader-fourhalfStar" src="grubhub4.5star.png" alt="4.5star"></img>
+    starImage = <img className="reviewHeader-fourhalfStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub4.5star.png" alt="4.5star"></img>
   }
   else if (stars === 4) {
-    starImage = <img className="reviewHeader-fourStar" src="grubhub4star.png" alt="4star"></img>
+    starImage = <img className="reviewHeader-fourStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub4star.png" alt="4star"></img>
   }
   else if (stars === 3.5) {
-    starImage = <img className="reviewHeader-threehalfStar" src="grubhub3.5star.png" alt="3.5star"></img>
+    starImage = <img className="reviewHeader-threehalfStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub3.5star.png" alt="3.5star"></img>
   }
   else if (stars === 3) {
-    starImage = <img className="reviewHeader-threeStar" src="grubhub3star.png" alt="3star"></img>
+    starImage = <img className="reviewHeader-threeStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub3star.png" alt="3star"></img>
   }
   else if (stars === 2.5) {
-    starImage = <img className="reviewHeader-twohalfStar" src="grubhub2.5star.png" alt="2.5star"></img>
+    starImage = <img className="reviewHeader-twohalfStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub2.5star.png" alt="2.5star"></img>
   }
   //No restaurant is rated below 2.5 in our data
   else if (stars === 2) {
-    starImage = <img className="reviewHeader-twoStar" src="grubhub2star.png" alt="2star"></img>
+    starImage = <img className="reviewHeader-twoStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub2star.png" alt="2star"></img>
   }
   else if (stars === 1.5) {
     starImage = '1.5 stars'

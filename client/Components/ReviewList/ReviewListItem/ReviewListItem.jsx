@@ -22,26 +22,26 @@ const ReviewListItem = (props) => {
 
     if (props.review.user.topReviewer === true) {
       reviewStatus = 'Top reviewer';
-      reviewImage = <img className="reviewListItem-trophy" src="grubhubTrophy.png" alt="trophy"></img>
+      reviewImage = <img className="reviewListItem-trophy" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhubTrophy.png" alt="trophy"></img>
     } else if (props.review.user.numOfRatings === 1) {
       reviewStatus = '1 review';
-      reviewImage = <img className="reviewListItem-blueStar" src="grubhubBlueStar.png" alt="blueStar"></img>
+      reviewImage = <img className="reviewListItem-blueStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhubBlueStar.png" alt="blueStar"></img>
     } else {
       reviewStatus = props.review.user.numOfRatings + ' reviews';
-      reviewImage = <img className="reviewListItem-blueStar" src="grubhubBlueStar.png" alt="blueStar"></img>
+      reviewImage = <img className="reviewListItem-blueStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhubBlueStar.png" alt="blueStar"></img>
     }
     //starRating image
     numStars = props.review.starRating;
     if (numStars === 1) {
-      starImage = <img className="reviewListItem-oneStar" src="grubhub1star.png" alt="1star"></img>
+      starImage = <img className="reviewListItem-oneStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub1star.png" alt="1star"></img>
     } else if (numStars === 2) {
-      starImage = <img className="reviewListItem-twoStar" src="grubhub2star.png" alt="2star"></img>
+      starImage = <img className="reviewListItem-twoStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub2star.png" alt="2star"></img>
     } else if (numStars === 3) {
-      starImage = <img className="reviewListItem-threeStar" src="grubhub3star.png" alt="3star"></img>
+      starImage = <img className="reviewListItem-threeStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub3star.png" alt="3star"></img>
     } else if (numStars === 4) {
-      starImage = <img className="reviewListItem-fourStar" src="grubhub4star.png" alt="4star"></img>
+      starImage = <img className="reviewListItem-fourStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub4star.png" alt="4star"></img>
     } else if (numStars === 5) {
-      starImage = <img className="reviewListItem-fiveStar" src="grubhub5star.png" alt="5star"></img>
+      starImage = <img className="reviewListItem-fiveStar" src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhub5star.png" alt="5star"></img>
     }
   
     //Check to see if date is within the last 30 days
