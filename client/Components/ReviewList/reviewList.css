@@ -6,10 +6,12 @@
   font-size: 14px;
   line-height: 1.4;
   font-weight: 400;
-  width: 1000px;
+  width: 75%;
   padding: 32px;
+  padding-left: 104px;
   background-color: #FBFBFC;
   font-family: 'Roboto', sans-serif;
+  box-sizing: border-box;
 }
 
 .reviewList-sort {
