@@ -114,7 +114,7 @@
   padding: 0;
 }
 
-.orderItemModal-subtract, .orderItemModal-add{
+.orderItemModal-addSubtract{
   border: 2px solid #0070eb;
   color: #0070eb;
   font-weight: 900;
@@ -128,12 +128,7 @@
   margin: 0.4em;
 }
 
-.orderItemModal-subtract{
-  border: 2px solid rgba(0,0,0,.2);
-  color: rgba(0,0,0,.2);
-}
-
-.orderItemModal-button:hover, .orderItemModal-subtract:hover, .orderItemModal-add:hover{
+.orderItemModal-button:hover, .orderItemModal-addSubtract:hover{
   cursor: pointer
 }
 
