@@ -35,12 +35,16 @@ class App extends React.Component {
   
   getRestaurantDataByRestaurantID(data) {
     //get the restaurant id by looking at the restaurantID of the first review (assuming there is at least one review)
-    let id = data[0].restaurantID;
-    //loop over restaurant data to find the restaurant that matches the id
-    for (let i = 0; i < restaurantData.length; i++) {
-      if (id === restaurantData[i].id) {
-        return restaurantData[i];
+    if (data.length > 0) {
+      let id = data[0].restaurantID;
+      //loop over restaurant data to find the restaurant that matches the id
+      for (let i = 0; i < restaurantData.length; i++) {
+        if (id === restaurantData[i].id) {
+          return restaurantData[i];
+        }
       }
+    } else {
+      return {};
     }
   }
 

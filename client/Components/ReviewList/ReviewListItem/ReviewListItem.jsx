@@ -68,7 +68,7 @@ const ReviewListItem = (props) => {
     <div className="reviewListItem-body">
       <div className="reviewListItem-header">
         <div className="reviewListItem-avatarContainer">
-          <div className="reviewListItem-avatar">{firstLetter}</div>
+          <div className="reviewListItem-avatar" id="reviewListItem-avatar">{firstLetter}</div>
         </div>
         <div className="reviewListItem-userInfo">
           <div className="reviewListItem-nameAndDate">

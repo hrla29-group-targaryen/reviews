@@ -32,9 +32,9 @@ class ReviewList extends React.Component {
   render() {
     let viewAllButton;
     if (this.state.showViewAllButton === true) {
-      viewAllButton = <button className="reviewList-viewAllButton" onClick={this.handleViewAllClick}>View all reviews</button>
+      viewAllButton = <button className="reviewList-viewAllButton" id="reviewList-viewAllButton" onClick={this.handleViewAllClick}>View all reviews</button>
     } else {
-      viewAllButton = undefined;
+      viewAllButton = null;
     }
     let context = this;
     let reviews;

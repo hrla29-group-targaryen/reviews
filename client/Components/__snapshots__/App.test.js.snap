@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`testing App component should grab a snapshot of the component. 1`] = `
+exports[`testing App component should grab a snapshot of the component 1`] = `
 <div>
   <div
     className="reviewHeader-main"
@@ -105,7 +105,7 @@ exports[`testing App component should grab a snapshot of the component. 1`] = `
           <img
             alt="dropdownArrow"
             className="reviewList-dropdownArrow"
-            src="grubhubDropdownArrow.png"
+            src="https://s3-us-west-1.amazonaws.com/fechackreactor/grubhubDropdownArrow.png"
           />
         </div>
       </div>
@@ -115,6 +115,7 @@ exports[`testing App component should grab a snapshot of the component. 1`] = `
       >
         <button
           className="reviewList-viewAllButton"
+          id="reviewList-viewAllButton"
           onClick={[Function]}
         >
           View all reviews
