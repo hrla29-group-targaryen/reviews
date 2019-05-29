@@ -25,7 +25,7 @@ class App extends React.Component {
     let id = window.location.href.split("id=")[1];
     // console.log(id); //undefined
     // let url = window.location.href;
-    axios.get(`http://localhost:3200/restaurants/api/reviews/${id}`)
+    axios.get(`https://reviews-footer.herokuapp.com/restaurants/api/reviews/${id}`)
     // axios.get(url+'api/reviews')
       .then( data => {
         this.sortReviews('Most recent', data.data);
