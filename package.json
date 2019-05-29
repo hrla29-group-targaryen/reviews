@@ -1,14 +1,15 @@
 {
-  "name": "",
+  "name": "grubhub-reviews_footer",
   "version": "",
   "description": "",
   "author": "",
   "license": "",
   "scripts": {
-    "build": "webpack -w -d",
-    "start": "nodemon ./server/index.js",
+    "build": "webpack -p",
+    "start": "node ./server/index.js",
+    "dev:public" : "webpack -w -d",
+    "dev:server": "nodemon ./server/index.js",
     "seed": "node ./database/seed.js",
-    "generateData": "node ./database/mockdata.js",
     "test": "jest",
     "test:w": "jest --watchAll",
     "test:c": "jest --coverage"
