@@ -30,7 +30,6 @@ class App extends React.Component {
     axios.get(`${axios_url}/restaurants/api/reviews/${id}`)
     // axios.get(url+'api/reviews')
       .then( data => {
-        console.log(data)
         this.sortReviews('Most recent', data.data);
       })
       .catch(err => console.log('Error getting review data: ',err));
