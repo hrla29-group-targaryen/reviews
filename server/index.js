@@ -23,7 +23,6 @@ app.use('/restaurants/reviews_footer', express.static(path.join(__dirname, '../p
 // }));
 
 app.get('/restaurants/api/reviews/:restaurantID', (req, res) => {
-  console.log("server !!")
   const {restaurantID} = req.params;
 
   //GET data for one restaurant; i.e. send data back where {restaurantID : restaurantID}
