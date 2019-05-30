@@ -1,9 +1,9 @@
 const express = require('express')
 const path = require('path');
-// const bodyParser = require('body-parser');
 const db = require('../database/index.js');
 const ReviewList = require ('../database/model.js');
 const cors = require('cors');
+// const expressStaticGzip = require("express-static-gzip");
 
 const app = express()
 const port = process.env.PORT || 3200;
@@ -12,12 +12,18 @@ app.use(cors());
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-//serve the client with endpoint restaurant with specific restaurantID
+//serve static files
 // app.use('/restaurants/:restaurantID', express.static(path.join(__dirname, '../public')))
-app.use('/restaurants/reviews_footer', express.static(path.join(__dirname, '../public')));
+app.use('/restaurants/reviews_footer', express.static(path.join(__dirname, '../public')))
+
+//Serve compressed bundle.js
+// app.use('/restaurants/reviews_footer', expressStaticGzip(path.join(__dirname, '../public'), {
+// 	enableBrotli: true,
+// 	orderPreference: ['br', 'gz']
+// }));
 
 app.get('/restaurants/api/reviews/:restaurantID', (req, res) => {
-
+  console.log("server !!")
   const {restaurantID} = req.params;
 
   //GET data for one restaurant; i.e. send data back where {restaurantID : restaurantID}

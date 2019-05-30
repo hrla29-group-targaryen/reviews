@@ -1,6 +1,5 @@
 import React from 'react';
 import ReviewListItem from './ReviewListItem/ReviewListItem.jsx';
-import faker from 'faker';
 import './reviewList.css';
 
 class ReviewList extends React.Component {

@@ -5,6 +5,8 @@ import Footer from './Footer/Footer.jsx';
 import axios from 'axios';
 import restaurantData from '../../restaurantData.js';
 
+let axios_url = (process.env.NODE_ENV === 'development') ? 'http://localhost:3200' : 'https://reviews-footer.herokuapp.com'
+
 class App extends React.Component {
   constructor() {
     super();
@@ -25,9 +27,10 @@ class App extends React.Component {
     let id = window.location.href.split("id=")[1];
     // console.log(id); //undefined
     // let url = window.location.href;
-    axios.get(`https://reviews-footer.herokuapp.com/restaurants/api/reviews/${id}`)
+    axios.get(`${axios_url}/restaurants/api/reviews/${id}`)
     // axios.get(url+'api/reviews')
       .then( data => {
+        console.log(data)
         this.sortReviews('Most recent', data.data);
       })
       .catch(err => console.log('Error getting review data: ',err));
