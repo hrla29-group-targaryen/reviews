@@ -3,7 +3,7 @@ const path = require('path');
 const db = require('../database/index.js');
 const ReviewList = require ('../database/model.js');
 const cors = require('cors');
-// const expressStaticGzip = require("express-static-gzip");
+const expressStaticGzip = require("express-static-gzip");
 
 const app = express()
 const port = process.env.PORT || 3200;
@@ -14,13 +14,13 @@ app.use(express.json());
 
 //serve static files
 // app.use('/restaurants/:restaurantID', express.static(path.join(__dirname, '../public')))
-app.use('/restaurants/reviews_footer', express.static(path.join(__dirname, '../public')))
+// app.use('/restaurants/reviews_footer', express.static(path.join(__dirname, '../public')))
 
 //Serve compressed bundle.js
-// app.use('/restaurants/reviews_footer', expressStaticGzip(path.join(__dirname, '../public'), {
-// 	enableBrotli: true,
-// 	orderPreference: ['br', 'gz']
-// }));
+app.use('/restaurants/reviews_footer', expressStaticGzip(path.join(__dirname, '../public'), {
+	enableBrotli: true,
+	orderPreference: ['br', 'gz']
+}));
 
 app.get('/restaurants/api/reviews/:restaurantID', (req, res) => {
   const {restaurantID} = req.params;
